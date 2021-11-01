@@ -9,12 +9,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.guideapp.databinding.FragmentMallBinding
+import com.example.guideapp.databinding.FragmentRestaurantBinding
 import com.example.guideapp.items.ItemAdapter
 import com.example.guideapp.items.Items
 
-class MallFragment : Fragment(), RecyclerLocationClick, RecyclerNumberClick {
-    lateinit var binding: FragmentMallBinding
+class RestaurantFragment : Fragment(), RecyclerLocationClick, RecyclerNumberClick {
+    lateinit var binding: FragmentRestaurantBinding
     private val adapter by lazy { ItemAdapter(requireContext(), this, this) }
     private val imageList by lazy{
         mutableListOf(R.drawable.res_buhara, R.drawable.res_faiza, R.drawable.res_navat, R.drawable.res_supara)
@@ -22,27 +22,27 @@ class MallFragment : Fragment(), RecyclerLocationClick, RecyclerNumberClick {
 
     private val itemList by lazy {
         mutableListOf(
-            Items(getString(R.string.plaza_info),
-                getString(R.string.plaza),
-                getString(R.string.plaza_contact),
-                getString(R.string.plaza_location),
-                getString(R.string.plaza_location_url)),
-            Items(getString(R.string.bishkek_park_info),
-                getString(R.string.bishkek_park),
-                getString(R.string.bishkek_park_contact),
-                getString(R.string.bishkek_park_location),
-                getString(R.string.bishkek_park_location_url)),
-            Items(getString(R.string.asiamall_info),
-                getString(R.string.asiamall),
-                getString(R.string.asiamall_contact),
-                getString(R.string.asiamall_location),
-                getString(R.string.asiamall_location_url)),
-            Items(getString(R.string.ala_archa_info),
-                getString(R.string.ala_archa),
-                getString(R.string.ala_archa_contact),
-                getString(R.string.ala_archa_location),
-                getString(R.string.ala_archa_location_url)))
-    }
+            Items(getString(R.string.buhara_info),
+                getString(R.string.buhara),
+                getString(R.string.buhara_contact),
+                getString(R.string.buhara_location),
+                getString(R.string.buhara_location_url)),
+            Items(getString(R.string.faiza_info),
+                getString(R.string.faiza),
+                getString(R.string.faiza_contact),
+                getString(R.string.faiza_location),
+                getString(R.string.faiza_location_url)),
+            Items(getString(R.string.navat_info),
+                getString(R.string.navat),
+                getString(R.string.navat_contact),
+                getString(R.string.navat_location),
+                getString(R.string.navat_location_url)),
+            Items(getString(R.string.supara_info),
+                getString(R.string.supara),
+                getString(R.string.supara_contact),
+                getString(R.string.supara_location),
+                getString(R.string.supara_location_url)))
+     }
 
 
     override fun onCreateView(
@@ -50,7 +50,7 @@ class MallFragment : Fragment(), RecyclerLocationClick, RecyclerNumberClick {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_mall, container, false)
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_restaurant, container, false)
         init()
         return binding.root
     }

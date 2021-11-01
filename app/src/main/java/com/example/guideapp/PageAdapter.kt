@@ -11,7 +11,7 @@ class PageAdapter (fragment: Fragment) : FragmentStateAdapter(fragment) {
     override fun createFragment(position: Int): Fragment {
         return when(position) {
             0 -> {
-                RestarauntFragment()
+                RestaurantFragment()
             }
             1 -> {
                 CinemaFragment()
